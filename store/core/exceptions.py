@@ -5,6 +5,12 @@ class BaseException(Exception):
         if message:
             self.message = message
 
+class NotFoundException(Exception):
+    def __init__(self, message: str):
+        self.message = message
+        super().__init__(self.message)
 
-class NotFoundException(BaseException):
-    message = "Not Found"
+class InsertionException(Exception):
+    def __init__(self, message: str):
+        self.message = message
+        super().__init__(self.message)
